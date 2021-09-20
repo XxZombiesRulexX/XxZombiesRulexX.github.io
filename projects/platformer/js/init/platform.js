@@ -38,7 +38,8 @@
 
         // example:
 
-        createPlatform(400,250)
+        createPlatform(400,250,1)
+        createPlatform(200,450,1)
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
