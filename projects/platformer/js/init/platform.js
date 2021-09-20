@@ -38,11 +38,10 @@
 
         // example:
 
-        createPlatform(400,250,1)
-        createPlatform(200,450,1)
+        createPlatform(400,250,1);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
-    }
+        }
     platform.init = init;
 })(window);
