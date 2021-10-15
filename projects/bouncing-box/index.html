@@ -14,7 +14,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 400px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -31,7 +31,7 @@
 		(function(){
 			'use strict'
 			/* global jQuery */
-
+				
 			//////////////////////////////////////////////////////////////////
 			/////////////////// SETUP DO NOT DELETE //////////////////////////
 			//////////////////////////////////////////////////////////////////
@@ -50,7 +50,8 @@
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
 			}
-
+			
+			var newPositionX = 5
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
@@ -61,7 +62,10 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+		   var positionX = 0 + 10;
+           var points = 0
+           var speed = 10
+
 
 			
 			/* 
@@ -70,21 +74,40 @@
 			turn it around! 
 			*/
 			function update() {
-				
+               positionX = positionX + speed;
+               moveBoxTo(positionX);
+               if (positionX > boardWidth) {
+                   speed *= -1;
+               }
+               if (positionX < 0) {
+                   speed *= -1;
+               }
+ 
+           };
 
-			};
-
+			
+			
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+               positionX = 0;
+               positionX = positionX + 1;
+               points = points + 1;
+               changeBoxText(points);
+               if (speed >= 1) {
+                   speed = speed + 3;
+                   if (speed <= -1) {
+                       speed = speed - 3;
+                   }
+               }
+ 
+ 
+           };
+       })();
 
-
-			};
-		})();
 	</script>
 </body>
 </html>
