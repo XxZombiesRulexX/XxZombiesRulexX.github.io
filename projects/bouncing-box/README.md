@@ -172,7 +172,7 @@ Variables allow the computer to remember pieces of information as our program ru
 
 ```javascript
 // TODO 2 - Variable declarations 
-
+var positionX = 0
 /* Your Variable Declaration HERE */
 ```
 
